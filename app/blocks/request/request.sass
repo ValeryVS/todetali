@@ -1,0 +1,33 @@
+.request
+  padding-top: 50px
+  text-align: center
+  &__title
+    @media only screen and (max-width: 767px)
+      font-size: 20px
+    @media only screen and (min-width: 768px)
+      font-size: 36px
+    color: #FFF
+    margin-bottom: 65px
+  &__text
+    @media only screen and (min-width: 768px)
+      font-size: 22px
+    color: #FFF
+    margin-bottom: 65px
+  &__form
+    width: 265px
+    margin-left: auto
+    margin-right: auto
+    &__control
+      padding: 14px 18px
+      // height: ($line-height-computed + (14px * 2) + 2)
+      background-color: #27303B
+      border-color: transparent
+      color: #FFF
+    &__submit
+      margin-top: 60px
+      padding: 12px 24px
+      border-radius: 24px
+      font-size: 16px
+  &__message
+    height: 40px
+    color: #FFF

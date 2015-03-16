@@ -1,0 +1,13 @@
+section.request
+  h1.request__title
+    | Готов сэкономить на 
+    br
+    | деталях для тех. обслуживания?
+  form.request__form(action='contact.php', role='request-form')
+    .form-group
+      input.form-control.request__form__control(name='name', placeholder='Ваше имя')
+    .form-group
+      input.form-control.request__form__control(name='contact', placeholder='Телефон или email')
+    .form-group.text-center
+      button.btn.btn-primary.request__form__submit(type='submit') Перезвони мне!
+    .request__message(role='form-messages')

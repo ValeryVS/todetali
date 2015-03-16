@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta('http-equiv'='X-UA-Compatible', content='IE=edge')
+    title= title
+    meta(name='description', content='#{description}')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(property='og:type', content='article')
+    meta(property='og:title', content='#{title}')
+    meta(property='og:description', content='#{description}')
+    link(rel='stylesheet', href='assets/app.css')
+  body
+    include ../blocks/header/header.jade
+    include ../blocks/screen/screen.jade
+    include ../blocks/brands/brands.jade
+    include ../blocks/details/details.jade
+    include ../blocks/original/original.jade
+    include ../blocks/video/video.jade
+    include ../blocks/compare/compare.jade
+    include ../blocks/request/request.jade
+    include ../blocks/anotherDetails/anotherDetails.jade
+    include ../blocks/footer/footer.jade
+    script(src='assets/app.js')
