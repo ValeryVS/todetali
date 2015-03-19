@@ -1,23 +1,39 @@
 .header
-  position: fixed
-  z-index: 1
-  top: 0
-  @media only screen and (max-width: 1399px)
-    width: 100%
-    left: 0
-  @media only screen and (min-width: 1400px)
-    width: 1400px
-    left: 50%
-    margin-left: -700px
+  position: relative
+  max-width: $site-width
+  margin: 0 auto
+  height: 96px
 
 .logo
   position: absolute
   @media only screen and (max-width: 767px)
     left: 10px
-    top: 10px
+    top: 24px
   @media only screen and (min-width: 768px)
     left: 60px
-    top: 36px
-  font-size: 20px
-  color: #FFF
-  text-shadow: 0 0 2px #000
+    top: 24px
+  font-size: 24px
+  color: $text-color--blue
+  &__icon
+    +icon--gear
+    display: inline-block
+    vertical-align: middle
+    font-size: 52px
+    margin-top: -18px
+    margin-left: 9px
+
+.contacts
+  position: absolute
+  right: 30px
+  top: 30px
+  color: $text-color--blue
+  &__text
+    display: inline-block
+    vertical-align: middle
+    font-size: 14px
+    margin-right: 5px
+    line-height: 1.2
+  &__phone
+    display: inline-block
+    vertical-align: middle
+    font-size: 24px

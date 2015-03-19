@@ -2,4 +2,14 @@ html, body
   height: 100%
 
 body
-  background-color: #151A20
+  font-family: 'Open Sans', sans-serif
+  color: $text-color
+
+h1,h2,h3,h4,h5,h6,p
+  &:first-child
+    margin-top: 0
+  &:last-child
+    margin-bottom: 0
+
+.red
+  color: $text-color--red

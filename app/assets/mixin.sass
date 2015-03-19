@@ -1,0 +1,35 @@
+=translate3d-default
+  transform: translate3d(0, 0, 0)
+  backface-visibility: hidden
+
+=background-cover
+  +translate3d-default
+  background-size: cover
+
+=background-contain
+  +translate3d-default
+  background-size: contain
+
+=vertical-align-cont($align)
+  white-space: nowrap
+  &:after
+    content: ' '
+    height: 100%
+    width: 0
+    display: inline-block
+    vertical-align: $align
+    margin-left: -0.25em
+
+=vertical-align-item($align)
+  display: inline-block
+  vertical-align: $align
+  white-space: normal
+
+=clearfix
+  &:before,
+  &:after
+    content: ' '
+    display: table
+    width: 100%
+  &:after
+    clear: both
