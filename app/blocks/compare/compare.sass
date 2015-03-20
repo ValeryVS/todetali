@@ -4,7 +4,6 @@
   margin-left: auto
   margin-right: auto
   margin-top: 100px
-  margin-bottom: 100px
   +clearfix
   &__image
     @media only screen and (min-width: 768px)
@@ -12,10 +11,43 @@
   &__content
     @media only screen and (min-width: 1024px)
       float: left
-      margin-top: 32px
-      margin-left: 40px
-    &__title
-      font-size: 38px
+      width: 600px
+      margin-top: 25px
+      margin-left: 70px
+  &__title
+    font-size: 38px
+    font-weight: 300
+    margin-bottom: 45px
+  &__table-wrapper
+    padding-left: 20px
+    padding-right: 20px
+  &__table
+    width: 100%
+    &__header
+      text-align: center
+      color: $text-color--gray
       font-weight: 300
-      margin-bottom: 20px
-    &__table
+      padding-bottom: 10px
+    &__col
+      &--1
+        width: 34%
+      &--2
+        width: 33%
+      &--3
+        width: 33%
+    &__cell
+      font-size: 18px
+      font-weight: 300
+      padding-top: 22px
+      padding-bottom: 6px
+      border-bottom: 1px solid $text-color--gray
+    &__cell--first-string
+      font-size: 18px
+      font-weight: 300
+      padding-top: 6px
+      padding-bottom: 8px
+      border-bottom: 1px solid $text-color--gray
+    &__cell--last-string
+      font-size: 18px
+      font-weight: 300
+      padding-top: 10px

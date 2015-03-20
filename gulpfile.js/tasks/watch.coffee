@@ -15,4 +15,7 @@ gulp.task 'watch', ['browserSync'], ->
   gulp.watch [
     config.watch.html.src
   ], [ 'jade' ]
+  gulp.watch [
+    config.watch.copy.src
+  ], [ 'copy' ]
   return

@@ -1,0 +1,32 @@
+.another-details
+  margin-top: 2px
+  text-align: center
+  &__title
+    @media only screen and (max-width: 767px)
+      font-size: 20px
+    @media only screen and (min-width: 768px)
+      font-size: 38px
+      line-height: 1.2
+    font-weight: 300
+    margin-bottom: 60px
+  &__text
+    @media only screen and (min-width: 768px)
+      font-size: 18px
+    font-weight: 300
+    margin-bottom: 65px
+    width: 90%
+    max-width: 680px
+    margin: 0 auto
+  &__button
+    margin-top: 60px
+    padding: 9px 34px
+    border-radius: 24px
+    font-size: 16px
+    line-height: 24px
+    height: 46px
+    color: #FFF
+    background-color: $btn-secondary--color
+    border: 2px solid $btn-secondary--border-color
+    &:hover
+      background-color: darken($btn-secondary--color, 10%)
+      border-color: darken($btn-secondary--border-color, 10%)

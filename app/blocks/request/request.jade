@@ -4,10 +4,10 @@ section.request
     br
     | деталях для тех. обслуживания?
   form.request__form(action='contact.php', role='request-form')
-    .form-group
-      input.form-control.request__form__control(name='name', placeholder='Ваше имя')
-    .form-group
-      input.form-control.request__form__control(name='contact', placeholder='Телефон или email')
-    .form-group.text-center
-      button.btn.btn-primary.request__form__submit(type='submit') Перезвони мне!
+    .request__form__group
+      input.request__form__control(name='name', placeholder='Ваше имя')
+    .request__form__group
+      input.request__form__control(name='contact', placeholder='Телефон или email')
+    .request__form__group.text-center
+      button.request__form__submit(type='submit') Перезвони мне!
     .request__message(role='form-messages')

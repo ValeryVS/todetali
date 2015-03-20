@@ -58,6 +58,10 @@ module.exports =
       appendCodepoints: true
       normalize: false
 
+  copy:
+    src: sourceDirectory + '/pages/**/*.php'
+    dest: publicDirectory
+
   watch:
     sass:
       src: sourceDirectory + '/**/*.{sass,scss}'
@@ -69,3 +73,5 @@ module.exports =
       src: sourceDirectory + '/**/*.js'
     html:
       src: sourceDirectory + '/**/*.{jade,html,md}'
+    copy:
+      src: sourceDirectory + '/pages/**/*.php'

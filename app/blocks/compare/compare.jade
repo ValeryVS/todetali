@@ -1,21 +1,30 @@
 section.compare
   img.compare__image(src='assets/images/img03.jpg', alt='Audi')
   .compare__content
-    .compare__content__title Cравним стоимости для Q3 2.0T?
-    table.compare__content__table
-      tr
-        td
-        td.text-center.gray Цена дилера
-        td.text-center.gray Цена у нас
-      tr
-        td
-        td.text-center
-        td.text-center
-      tr
-        td
-        td.text-center
-        td.text-center
-      tr
-        td
-        td
-        td.text-center.red
+    .compare__title Cравним стоимости для Q3 2.0T?
+    .compare__table-wrapper
+      table.compare__table
+        thead
+          tr
+            th.compare__table__col--1.compare__table__header
+            th.compare__table__col--2.compare__table__header Цена дилера
+            th.compare__table__col--3.compare__table__header Цена у нас
+        tbody
+          tr
+            td.compare__table__cell--first-string Фильтр салона
+            td.compare__table__cell--first-string.text-center 2 068
+            td.compare__table__cell--first-string.text-center 984
+            td
+          tr
+            td.compare__table__cell Фильтр масляный
+            td.compare__table__cell.text-center 1 574
+            td.compare__table__cell.text-center 782
+            td.compare__table__cell
+          tr
+            td.compare__table__cell Фильтр воздушный
+            td.compare__table__cell.text-center 1 916
+            td.compare__table__cell.text-center 1070
+          tr
+            td.compare__table__cell--last-string
+            td.compare__table__cell--last-string
+            td.compare__table__cell--last-string.text-center.red Экономия 49%

@@ -5,4 +5,4 @@ gulp.task 'build', gulpSequence(
   'clean'
   ['iconFont', 'images']
   ['scripts', 'styles']
-  'jade')
+  ['jade', 'copy'])

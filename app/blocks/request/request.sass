@@ -1,33 +1,42 @@
 .request
-  padding-top: 50px
+  margin-top: 60px
   text-align: center
   &__title
     @media only screen and (max-width: 767px)
       font-size: 20px
     @media only screen and (min-width: 768px)
-      font-size: 36px
-    color: #FFF
-    margin-bottom: 65px
-  &__text
-    @media only screen and (min-width: 768px)
-      font-size: 22px
-    color: #FFF
-    margin-bottom: 65px
+      font-size: 40px
+      line-height: 1.2
+    font-weight: 400
+    margin-bottom: 56px
   &__form
     width: 265px
     margin-left: auto
     margin-right: auto
+    &__group
+      margin-bottom: 20px
     &__control
       padding: 14px 18px
-      // height: ($line-height-computed + (14px * 2) + 2)
-      background-color: #27303B
+      width: 100%
+      height: 52px
+      font-size: 16px
+      line-height: 24px
+      background-color: #E6E6E6
       border-color: transparent
+      border-radius: 6px
       color: #FFF
     &__submit
-      margin-top: 60px
-      padding: 12px 24px
+      margin-top: 48px
+      padding: 11px 36px
+      border-width: 0
       border-radius: 24px
       font-size: 16px
+      line-height: 24px
+      height: 46px
+      color: #FFF
+      background-color: $btn-primary--color
+      &:hover
+        background-color: darken($btn-primary--color, 10%)
   &__message
     height: 40px
     color: #FFF
