@@ -1,12 +1,13 @@
-gulp        = require('gulp')
-browserSync = require('browser-sync')
-gulpif      = require('gulp-if')
-sass        = require('gulp-sass')
-sourcemaps  = require('gulp-sourcemaps')
-filter      = require('gulp-filter')
-config      = require('../config').sass
-fs          = require('fs')
-env         = require('../env')  if fs.existsSync('gulpfile.js/env.coffee')
+gulp         = require('gulp')
+browserSync  = require('browser-sync')
+gulpif       = require('gulp-if')
+sass         = require('gulp-sass')
+sourcemaps   = require('gulp-sourcemaps')
+autoprefixer = require('gulp-autoprefixer')
+filter       = require('gulp-filter')
+config       = require('../config').sass
+fs           = require('fs')
+env          = require('../env')  if fs.existsSync('gulpfile.js/env.coffee')
 
 config.settings.outputStyle = 'compressed'  if env is 'production'
 
@@ -20,6 +21,7 @@ gulp.task 'sass', ->
       console.error 'Error!', err.message
       return
     )
+    .pipe(autoprefixer(config.autoprefixer))
     .pipe(gulpif(env is 'development',
       sourcemaps.write()
     ))

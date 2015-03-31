@@ -27,6 +27,8 @@ module.exports =
     dest: publicDirectory
 
   sass:
+    autoprefixer:
+      browsers: ['last 2 version']
     src: sourceAssets + '/app.sass'
     dest: publicAssets
     settings:

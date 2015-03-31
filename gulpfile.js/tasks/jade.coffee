@@ -5,6 +5,6 @@ config      = require('../config').jade
 
 gulp.task 'jade', ->
   gulp.src(config.src)
-    .pipe(jade())
+    .pipe(jade(pretty: true))
     .pipe(gulp.dest(config.dest))
     .pipe(browserSync.reload({stream:true}))
