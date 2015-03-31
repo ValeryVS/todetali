@@ -1,4 +1,20 @@
 section.another-details
   h1.another-details__title Что делать, если нужны другие детали?
   p.another-details__text Мы подберем для Вас любую деталь по VIN номеру автомобиля, Заполните форму ниже и мы свяжемся с Вами в кратчайшие сроки:
-  button.another-details__button Указать данные
+  button.another-details__button(role='open-another-details-popup') Указать данные
+  section.popup(role='another-details-popup')
+    .popup__scroll-cont
+      .popup__base(role='another-details-popup-close')
+      .popup__body
+        h1.popup__title Для поиска деталей введите данные:
+        p.popup__text Мы подберем оптимальный вариант и свяжемся с Вами
+        form.request__form(action='contact.php', role='details-request-form')
+          .request__form__group
+            input.request__form__control(name='vin', placeholder='VIN')
+          .request__form__group
+            input.request__form__control(name='name', placeholder='Ваше имя')
+          .request__form__group
+            input.request__form__control(name='contact', placeholder='Телефон или email')
+          .request__form__group.text-center
+            button.request__form__submit--no-margin(type='submit') Перезвоните мне!
+          .request__message(role='details-form-messages')

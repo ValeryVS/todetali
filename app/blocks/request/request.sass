@@ -24,7 +24,6 @@
       background-color: #E6E6E6
       border-color: transparent
       border-radius: 6px
-      color: #FFF
     &__submit
       margin-top: 48px
       padding: 11px 36px
@@ -37,6 +36,13 @@
       background-color: $btn-primary--color
       &:hover
         background-color: darken($btn-primary--color, 10%)
+      &--no-margin
+        @extend .request__form__submit
+        margin-top: 0
   &__message
+    font-size: 14px
     height: 40px
-    color: #FFF
+    &.error
+      color: #880000
+    &.success
+      color: #008800

@@ -3,6 +3,8 @@
     // Only process POST reqeusts.
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Get the form fields and remove whitespace.
+        $vin = strip_tags(trim($_POST["vin"]));
+        $vin = str_replace(array("\r","\n"),array(" "," "),$vin);
         $name = strip_tags(trim($_POST["name"]));
         $name = str_replace(array("\r","\n"),array(" "," "),$name);
         $contact = strip_tags(trim($_POST["contact"]));
@@ -26,6 +28,9 @@
 
         // Build the email content.
         $email_content = "Имя: $name\n";
+        if ( !empty($vin) ) {
+            $email_content .= "VIN: $vin\n";
+        }
         $email_content .= "Контакт: $contact\n";
 
         // Send the email.
